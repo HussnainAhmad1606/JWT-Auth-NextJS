@@ -1,4 +1,4 @@
-
+import connectDB from "@/middlewares/connectDB"
 import bcrypt from 'bcryptjs';
 import User from "@/models/User"
 const signupHandler = async (req, res) => {
@@ -33,4 +33,4 @@ const signupHandler = async (req, res) => {
     }
 };
 
-export default signupHandler;
+export default connectDB(signupHandler);
